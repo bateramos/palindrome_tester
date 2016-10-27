@@ -5,7 +5,7 @@ module.exports.isPalindrome = (req, res, next) => {
 
 	if (!string) {
 		res.status(400).send();
-		return next();
+		return;
 	}
 
 	let isPalindrome = false;
@@ -20,9 +20,7 @@ module.exports.isPalindrome = (req, res, next) => {
 
 	if (isPalindrome) {
 		res.status(200).send();
-		return next();
+	} else {
+		res.status(400).send();
 	}
-
-	res.status(400).send();
-	return next();
 };
