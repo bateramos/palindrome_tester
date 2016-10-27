@@ -1,12 +1,14 @@
 'use strict'
 
 module.exports.isPalindrome = (req, res, next) => {
-	const string = req.body.stringToVerify;
+	let string = req.body.stringToVerify;
 
 	if (!string) {
 		res.status(400).send();
 		return;
 	}
+
+	string = string.replace(/ /g, '');
 
 	let isPalindrome = false;
 	let invertedIndex = string.length;

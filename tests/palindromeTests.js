@@ -55,5 +55,13 @@ describe('Palindrome', function() {
 
 			controller.isPalindrome({body: {stringToVerify:"1010"}}, mockRes);
 		});
+
+		it('A MAN A PLAN A CANAL PANAMA', () => {
+			verify = () => {
+				assert.equal(status, 200);
+			};
+
+			controller.isPalindrome({body: {stringToVerify:"A MAN A PLAN A CANAL PANAMA"}}, mockRes);
+		});
 	});
 });
