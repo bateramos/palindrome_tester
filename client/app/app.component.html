@@ -1,0 +1,14 @@
+<div class="container">
+	<h1>Palindrome Tester</h1>
+	<hr/>
+
+	<div class="form-group">
+		<label for="stringToVerify">String to verify</label>
+		<input type="text" class="form-control" id="stringToVerify" required [(ngModel)]="stringToVerify" (keyup.enter)="verifyString()" (keyup)="onKey()">
+		<br>
+		<input type="button" value="Verify" (click)="verifyString()" class="btn btn-default"/>
+		<label *ngIf="needToSearch">To verify, click on the button or press enter</label>
+		<label *ngIf="!needToSearch && isPolindrome">Is a Palidrome</label>
+		<label *ngIf="!needToSearch && !isPolindrome">Is not a Palidrome</label>
+	</div>
+</div>
