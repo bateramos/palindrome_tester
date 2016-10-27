@@ -8,6 +8,7 @@ How to Run:
 
 - Execute 'npm start' on the root of the project
 - Execute 'npm start' on the folder 'client' to generate the client app
+- After the processing is complete, enter in your browser http://localhost:3000 
 
 How to Test:
 
